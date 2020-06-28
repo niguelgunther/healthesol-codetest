@@ -2,6 +2,15 @@
 <html lang='eng'>
 <head>
     <meta charset="UTF-8">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 <title>Login</title>
 </head>
 <body>
@@ -13,6 +22,11 @@
     <p>Access denied</p>
     {% endif %}
 
+    <div class='container'>
+        <div class='col-sm-6'>
+            <div class='panel panel-default'>
+                <div class='panel-heading'>LOGIN</div>
+                    <div class='panel-body'>
     <form method="post" action="{% url 'login' %}">
         {% csrf_token %}
 
@@ -22,7 +36,10 @@
         <p><input type="submit" = value="login"></p>
         <input type="hidden" name="next" value="{{ next }}">
     </form>
-   
+</div>
+</div>
+</div>
+</div>
 
 </body>
 </html>

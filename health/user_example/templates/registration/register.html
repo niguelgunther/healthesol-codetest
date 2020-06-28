@@ -2,23 +2,42 @@
 <html lang='eng'>
 <head>
     <meta charset="UTF-8">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 <title>Register</title>
 </head>
 <body>
     <h1>Registration Page!</h1>
-   <form method="post" action="{% url 'register' %}">
-       {% csrf_token %}
+    
+<!-- registratie form met bootstrap style-->
 
-       {% if form.errors %}
-       <p>Invalid Input</p>
-       {% endif %}
+    <div class='container'>
+        <div class='col-sm-6'>
+            <div class='panel panel-default'>
+                <div class='panel-heading'>Register</div>
+                    <div class='panel-body'>
+                        <form method="post" action="{% url 'register' %}">
+                            {% csrf_token %}
 
-       {{ form.as_p }}
+                            {% if form.errors %}
+                            <p>Invalid Input</p>
+                            {% endif %}
 
-       <input type="submit" value="Register">
+                            {{ form.as_p }}
 
-   </form>
- 
+                            <input type="submit" value="Register">
 
+                        </form>
+                    </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
