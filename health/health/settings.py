@@ -75,7 +75,7 @@ WSGI_APPLICATION = 'health.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresgl',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'health_db',
         'USER': 'postgres',
         'PASSWORD': 'P@$$word',
