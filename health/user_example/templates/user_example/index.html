@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html lang='eng'>
-<head>
-    <meta charset="UTF-8">
-<title>The Index</title>
-</head>
-<body>
-
+{% extends "user_example/base.html" %}
+{% block content %}
+    {% for post in posts %}
 <h1>This is the Index page</h1>
 {% if user.is_authenticated %}
 <h2>Welcome {{ user.username }}</h2>
@@ -13,5 +8,5 @@
 <h2>You are not logged in.</h2>
 {% endif %}
 
-</body>
-</html>
+{% endfor %}
+{% endblock content %}
